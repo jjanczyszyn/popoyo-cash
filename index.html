@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cash Delivery Popoyo</title>
+  <meta name="description" content="Pay digitally. Receive cash delivered in Popoyo, Nicaragua." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" data-i18n="brand">Cash Popoyo</div>
+    <div class="lang">
+      <button type="button" data-lang="en" class="lang-btn">EN</button>
+      <span class="lang-sep">/</span>
+      <button type="button" data-lang="es" class="lang-btn">ES</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 data-i18n="hero.title">Get Cash Delivered</h1>
+      <p data-i18n="hero.sub">Pay digitally. Receive cash.</p>
+      <p class="fee" data-i18n="fee">5% fee</p>
+      <button type="button" class="cta" id="ctaScroll" data-i18n="cta">Get Cash</button>
+      <p class="methods" data-i18n="methods">Venmo · Zelle · PayPal · Apple Pay · Apple Cash · Bizum · Bank Transfer</p>
+    </section>
+
+    <section class="card" id="formCard">
+      <form id="requestForm" novalidate>
+        <label>
+          <span data-i18n="form.amount">Amount (USD)</span>
+          <input type="number" name="amount" inputmode="decimal" min="20" step="1" required />
+        </label>
+        <p class="receive" id="receiveLine" hidden></p>
+
+        <label>
+          <span data-i18n="form.name">Name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+
+        <label>
+          <span data-i18n="form.whatsapp">WhatsApp</span>
+          <input type="tel" name="whatsapp" placeholder="+1 555 000 0000" required />
+        </label>
+
+        <label>
+          <span data-i18n="form.location">Location (or Maps link)</span>
+          <input type="text" name="location" required />
+        </label>
+
+        <label>
+          <span data-i18n="form.method">Payment method</span>
+          <select name="paymentMethod" required>
+            <option value="venmo">Venmo</option>
+            <option value="zelle">Zelle</option>
+            <option value="paypal">PayPal</option>
+            <option value="apple_pay">Apple Pay</option>
+            <option value="apple_cash">Apple Cash</option>
+            <option value="bizum">Bizum</option>
+            <option value="bank_transfer" data-i18n="form.method.bank">Bank transfer</option>
+          </select>
+        </label>
+
+        <button type="submit" class="cta" data-i18n="form.submit">Send Request</button>
+      </form>
+    </section>
+
+    <section class="card" id="instructionsCard" hidden>
+      <h2 data-i18n="steps.step1">Send payment</h2>
+      <div id="paymentInstructions" class="pay-block"></div>
+
+      <h2 data-i18n="steps.step2">We confirm on WhatsApp</h2>
+      <h2 data-i18n="steps.step3">Cash delivered</h2>
+
+      <a id="waLink" href="#" class="cta" target="_blank" rel="noopener" data-i18n="openWhatsApp">Open WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://wa.me/50589750052" target="_blank" rel="noopener">+505 8975 0052</a>
+    <span> · Popoyo, Nicaragua</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
