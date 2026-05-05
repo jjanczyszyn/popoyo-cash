@@ -12,8 +12,6 @@ const PAYMENT_CONFIG = {
   bizum:        { phone: "+34 600 000 000", note: "Confirm number on WhatsApp before sending" },
   bank_transfer:{
     name: "Justyna Janczyszyn",
-    routing: "026073150",
-    account: "822000215918",
   },
 };
 
@@ -43,11 +41,10 @@ const I18N = {
     "pay.email": "Email",
     "pay.recipient": "Recipient",
     "pay.link": "Link",
-    "pay.account": "Account",
-    "pay.routing": "Routing",
     "pay.name": "Beneficiary",
     "pay.note": "Note",
     "pay.amount": "Amount",
+    "pay.bank.note": "We'll share account details on WhatsApp.",
     "wa.message": (a, m, l) => `I want $${a} cash. I will pay via ${m}. Location: ${l}`,
     "method.venmo": "Venmo",
     "method.zelle": "Zelle",
@@ -82,11 +79,10 @@ const I18N = {
     "pay.email": "Correo",
     "pay.recipient": "Beneficiario",
     "pay.link": "Enlace",
-    "pay.account": "Cuenta",
-    "pay.routing": "Routing",
     "pay.name": "Beneficiario",
     "pay.note": "Nota",
     "pay.amount": "Monto",
+    "pay.bank.note": "Te enviamos los datos de la cuenta por WhatsApp.",
     "wa.message": (a, m, l) => `Quiero $${a} en efectivo. Pagaré con ${m}. Ubicación: ${l}`,
     "method.venmo": "Venmo",
     "method.zelle": "Zelle",
@@ -194,8 +190,7 @@ function paymentInstructionsHTML(method, amountToSend) {
       body =
         row(t("pay.amount"), `$${amountToSend}`) +
         row(t("pay.name"), cfg.name) +
-        row(t("pay.routing"), cfg.routing) +
-        row(t("pay.account"), cfg.account);
+        row(t("pay.note"), t("pay.bank.note"));
       break;
   }
 
