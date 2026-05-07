@@ -3,23 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cash Delivery Popoyo</title>
-  <meta name="description" content="Pay digitally. Receive cash delivered in Popoyo, Nicaragua." />
+  <title>Popoyo ATM? No ATM in Popoyo — We Deliver Cash | Cash Popoyo</title>
+  <meta name="description" content="No ATM in Popoyo, Nicaragua? We deliver cash to your door. Pay with Venmo, Zelle, PayPal, Apple Pay, Apple Cash, Bizum or bank transfer. WhatsApp +505 8975 0052." />
+  <meta name="keywords" content="Popoyo ATM, ATM Popoyo, cajero Popoyo, cash Popoyo, Popoyo Nicaragua cash, sin cajero Popoyo, efectivo Popoyo, no ATM Popoyo, Tola ATM, surf Popoyo cash" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://cash.popoyo.co/" />
+  <link rel="alternate" href="https://cash.popoyo.co/" hreflang="en" />
+  <link rel="alternate" href="https://cash.popoyo.co/" hreflang="es" />
+  <link rel="alternate" href="https://cash.popoyo.co/" hreflang="de" />
+  <link rel="alternate" href="https://cash.popoyo.co/" hreflang="nl" />
+  <link rel="alternate" href="https://cash.popoyo.co/" hreflang="pt" />
+  <link rel="alternate" href="https://cash.popoyo.co/" hreflang="it" />
+  <link rel="alternate" href="https://cash.popoyo.co/" hreflang="fr" />
+  <link rel="alternate" href="https://cash.popoyo.co/" hreflang="x-default" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cash.popoyo.co/" />
+  <meta property="og:title" content="No ATM in Popoyo? We Deliver Cash" />
+  <meta property="og:description" content="Pay digitally, receive cash delivered in Popoyo, Nicaragua. WhatsApp +505 8975 0052." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="pt_PT" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="No ATM in Popoyo? We Deliver Cash" />
+  <meta name="twitter:description" content="Pay digitally, receive cash delivered in Popoyo, Nicaragua." />
+
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Cash Delivery Popoyo",
+    "alternateName": "Cash Popoyo",
+    "description": "Cash delivery service in Popoyo, Nicaragua for travelers without access to an ATM. Pay digitally and receive cash delivered.",
+    "url": "https://cash.popoyo.co/",
+    "telephone": "+505-8975-0052",
+    "areaServed": [
+      { "@type": "Place", "name": "Popoyo, Nicaragua" },
+      { "@type": "Place", "name": "Playa Popoyo" },
+      { "@type": "Place", "name": "Tola, Rivas, Nicaragua" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Popoyo",
+      "addressRegion": "Rivas",
+      "addressCountry": "NI"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 11.5083,
+      "longitude": -86.0531
+    },
+    "serviceType": "Cash delivery",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Venmo, Zelle, PayPal, Apple Pay, Apple Cash, Bizum, Bank transfer",
+    "priceRange": "5% fee",
+    "inLanguage": ["en", "es", "de", "nl", "pt", "it", "fr"]
+  }
+  </script>
 </head>
 <body>
   <header class="topbar">
     <div class="brand" data-i18n="brand">Cash Popoyo</div>
     <div class="lang">
-      <button type="button" data-lang="en" class="lang-btn">EN</button>
-      <span class="lang-sep">/</span>
-      <button type="button" data-lang="es" class="lang-btn">ES</button>
+      <select id="langSelect" class="lang-select" aria-label="Language">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+        <option value="nl">Nederlands</option>
+        <option value="pt">Português</option>
+        <option value="it">Italiano</option>
+        <option value="fr">Français</option>
+      </select>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <h1 data-i18n="hero.title">Get Cash Delivered</h1>
+      <p class="tagline" data-i18n="hero.tagline">No ATM in Popoyo? No problem. We deliver cash to you.</p>
       <p data-i18n="hero.sub">Pay digitally. Receive cash.</p>
       <p class="fee" data-i18n="fee">5% fee</p>
       <button type="button" class="cta" id="ctaScroll" data-i18n="cta">Get Cash</button>
